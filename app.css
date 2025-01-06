@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: #eee;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border: 1px solid blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    font-weight: bold;
+    font-variant: small-caps;    
+}
+
+.item::before {
+    content: '| ';
+}
+
+.item:last-child::after {
+    content: ' |';
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
