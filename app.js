@@ -1,4 +1,7 @@
+import itemsMultiselect from "./components/items-multiselect/items-multiselect.js";
+
 const app = Vue.createApp({
+    components: { itemsMultiselect },
     template: /*html*/`
         <div class="header">
             <items-multiselect :items="items"            
@@ -9,7 +12,7 @@ const app = Vue.createApp({
             <div v-for="item of selectedItems" :key="item.key" class="item">
                 {{ item.title }}
             </div>
-        </div>
+        </div>        
     `,
     data() {
         return {            
@@ -49,9 +52,6 @@ const app = Vue.createApp({
             this.selectedItems = selectedItems;
         }
     },
-    computed: {
-        
-    },
     created() {
         for (let i = 1; i <= 4000; i++) {
             this.items2.push({
@@ -62,3 +62,5 @@ const app = Vue.createApp({
         }
     }
 }); 
+
+export default app;
